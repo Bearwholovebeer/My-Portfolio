@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets - Titouan Lefebvre</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div class="ambient-glow"></div>
+<div class="ambient-glow ambient-glow--bottom"></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">Titouan <span>Lefebvre</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-link">Accueil</a></li>
+    <li><a href="projets.html" class="nav-link">Projets</a></li>
+    <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html" class="nav-link">Accueil</a>
+  <a href="projets.html" class="nav-link">Projets</a>
+  <a href="certifications.html" class="nav-link">Certifications</a>
+  <a href="parcours.html" class="nav-link">Parcours</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+</div>
+
+<!-- Header -->
+<header class="page-header">
+  <h1 class="section__title reveal">Mes <span class="accent">Projets</span></h1>
+  <p class="section__subtitle reveal">Sécurité offensive, réseau, développement - une sélection de travaux techniques.</p>
+</header>
+
+<!-- Projects -->
+<section class="section" style="padding-top:0">
+  <div class="card-grid">
+
+    <!-- 1 – Reverse Engineering -->
+    <article class="card reveal">
+      <h3 class="card__title">Reverse Engineering</h3>
+      <p class="card__desc">Apprentissage à l'Académie Militaire de la Gendarmerie. Analyse de binaires, désassemblage et compréhension des flux d'exécution.</p>
+      <div class="card__tags">
+        <span class="tag">Ghidra</span>
+        <span class="tag">x86 Assembly</span>
+        <span class="tag">Linux</span>
+      </div>
+    </article>
+
+    <!-- 2 – Réseau sécurisé -->
+    <article class="card reveal">
+      <h3 class="card__title">Réseau Sécurisé</h3>
+      <p class="card__desc">Conception et administration d'une architecture réseau complète avec VLAN, firewall et VPN. Mise en place de politiques de filtrage et de segmentation.</p>
+      <div class="card__tags">
+        <span class="tag">Cisco Packet Tracer</span>
+        <span class="tag">Stormshield</span>
+        <span class="tag">pfSense</span>
+      </div>
+    </article>
+
+    <!-- 3 – Cartes à puces -->
+    <article class="card reveal">
+      <h3 class="card__title">Cartes à puces &amp; SD</h3>
+      <p class="card__desc">Diagnostic et analyse de cartes à puces et cartes SD. Communication bas niveau via protocole ISO 7816 et scripting Python.</p>
+      <div class="card__tags">
+        <span class="tag">Python</span>
+        <span class="tag">Linux</span>
+        <span class="tag">ISO 7816</span>
+      </div>
+    </article>
+
+    <!-- 4 – Pentest AD (sans BloodHound / Mimikatz) -->
+    <article class="card reveal">
+      <h3 class="card__title">Pentest Active Directory</h3>
+      <p class="card__desc">Élévation de privilèges depuis un poste Windows standard via l'Active Directory. Cartographie des chemins d'attaque et extraction de credentials.</p>
+      <div class="card__tags">
+        <span class="tag">Kali Linux</span>
+        <span class="tag">PowerShell</span>
+      </div>
+    </article>
+
+    <!-- 5 – Pentest avancé (nouveau) -->
+    <article class="card reveal">
+      <h3 class="card__title">Pentest Avancé</h3>
+      <p class="card__desc">Test d'intrusion complet sur une infrastructure simulée : reconnaissance, exploitation de services vulnérables, pivot réseau et rédaction d'un rapport d'audit.</p>
+      <div class="card__tags">
+        <span class="tag">Kali Linux</span>
+        <span class="tag">Nmap</span>
+        <span class="tag">Metasploit</span>
+        <span class="tag">Burp Suite</span>
+      </div>
+    </article>
+
+    <!-- 6 – DevSecOps Intranet -->
+    <article class="card reveal">
+      <h3 class="card__title">DevSecOps - Intranet</h3>
+      <p class="card__desc">Développement d'un intranet d'école avec intégration de pratiques DevSecOps : pipeline CI/CD, analyse statique du code, conteneurisation et déploiement sécurisé.</p>
+      <div class="card__tags">
+        <span class="tag">Docker</span>
+        <span class="tag">Flask</span>
+        <span class="tag">HTML / CSS / JS</span>
+      </div>
+    </article>
+
+    <!-- 7 – Script scan réseau -->
+    <article class="card reveal" style="grid-column: 1 / -1;">
+      <h3 class="card__title">Script de Scan Réseau</h3>
+      <p class="card__desc">Script Python qui scanne un réseau local, liste les hôtes actifs et détecte les ports ouverts les plus courants.</p>
+      <div class="card__tags">
+        <span class="tag">Python</span>
+        <span class="tag">Scapy</span>
+        <span class="tag">Socket</span>
+      </div>
+      <div class="code-block"><pre><code><span class="cmt">#!/usr/bin/env python3</span>
+<span class="cmt">"""Scan réseau local - hôtes actifs + ports ouverts."""</span>
+
+<span class="kw">import</span> socket
+<span class="kw">import</span> ipaddress
+<span class="kw">from</span> scapy.all <span class="kw">import</span> ARP, Ether, srp
+
+<span class="kw">def</span> <span class="fn">discover_hosts</span>(network: <span class="fn">str</span>) -> <span class="fn">list</span>[<span class="fn">dict</span>]:
+    <span class="str">"""ARP scan pour découvrir les hôtes actifs."""</span>
+    packet = Ether(dst=<span class="str">"ff:ff:ff:ff:ff:ff"</span>) / ARP(pdst=network)
+    result = srp(packet, timeout=<span class="num">2</span>, verbose=<span class="num">0</span>)[<span class="num">0</span>]
+    hosts = []
+    <span class="kw">for</span> _, received <span class="kw">in</span> result:
+        hosts.append({
+            <span class="str">"ip"</span>: received.psrc,
+            <span class="str">"mac"</span>: received.hwsrc
+        })
+    <span class="kw">return</span> hosts
+
+<span class="kw">def</span> <span class="fn">scan_ports</span>(ip: <span class="fn">str</span>, ports: <span class="fn">list</span>[<span class="fn">int</span>]) -> <span class="fn">list</span>[<span class="fn">int</span>]:
+    <span class="str">"""Scan TCP connect sur une liste de ports."""</span>
+    open_ports = []
+    <span class="kw">for</span> port <span class="kw">in</span> ports:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(<span class="num">0.5</span>)
+        <span class="kw">if</span> sock.connect_ex((ip, port)) == <span class="num">0</span>:
+            open_ports.append(port)
+        sock.close()
+    <span class="kw">return</span> open_ports
+
+COMMON_PORTS = [<span class="num">21</span>, <span class="num">22</span>, <span class="num">23</span>, <span class="num">53</span>, <span class="num">80</span>, <span class="num">443</span>, <span class="num">445</span>, <span class="num">3306</span>, <span class="num">3389</span>, <span class="num">8080</span>]
+
+<span class="kw">if</span> __name__ == <span class="str">"__main__"</span>:
+    network = <span class="fn">input</span>(<span class="str">"Réseau (ex: 192.168.1.0/24) : "</span>)
+    <span class="fn">print</span>(<span class="str">f"\n[*] Scan ARP sur <span class="kw">{</span>network<span class="kw">}</span>..."</span>)
+    hosts = discover_hosts(network)
+    <span class="fn">print</span>(<span class="str">f"[+] <span class="kw">{</span><span class="fn">len</span>(hosts)<span class="kw">}</span> hôte(s) trouvé(s)\n"</span>)
+
+    <span class="kw">for</span> host <span class="kw">in</span> hosts:
+        ip = host[<span class="str">"ip"</span>]
+        mac = host[<span class="str">"mac"</span>]
+        open_p = scan_ports(ip, COMMON_PORTS)
+        ports_str = <span class="str">", "</span>.join(<span class="fn">map</span>(<span class="fn">str</span>, open_p)) <span class="kw">if</span> open_p <span class="kw">else</span> <span class="str">"aucun"</span>
+        <span class="fn">print</span>(<span class="str">f"  {ip}  ({mac})  —  ports ouverts : {ports_str}"</span>)</code></pre></div>
+    </article>
+
+    <!-- 8 – Dashboard monitoring (code inclus) -->
+    <article class="card reveal" style="grid-column: 1 / -1;">
+      <h3 class="card__title">Dashboard de Monitoring</h3>
+      <p class="card__desc">Mini dashboard HTML/JS affichant en temps réel l'état fictif de services réseau : charge CPU, RAM et statut des services.</p>
+      <div class="card__tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <div class="code-block"><pre><code><span class="cmt">// monitoring.js — Simulation de métriques réseau</span>
+
+<span class="kw">const</span> services = [
+  { name: <span class="str">"Firewall"</span>,    status: <span class="str">"up"</span> },
+  { name: <span class="str">"DNS"</span>,         status: <span class="str">"up"</span> },
+  { name: <span class="str">"VPN Gateway"</span>, status: <span class="str">"up"</span> },
+  { name: <span class="str">"Web Server"</span>,  status: <span class="str">"up"</span> },
+  { name: <span class="str">"SIEM"</span>,        status: <span class="str">"up"</span> },
+];
+
+<span class="kw">function</span> <span class="fn">randomMetric</span>(min, max) {
+  <span class="kw">return</span> (Math.random() * (max - min) + min).toFixed(<span class="num">1</span>);
+}
+
+<span class="kw">function</span> <span class="fn">updateDashboard</span>() {
+  <span class="kw">const</span> cpu  = randomMetric(<span class="num">15</span>, <span class="num">85</span>);
+  <span class="kw">const</span> ram  = randomMetric(<span class="num">40</span>, <span class="num">78</span>);
+  <span class="kw">const</span> net  = randomMetric(<span class="num">10</span>, <span class="num">950</span>);
+
+  document.getElementById(<span class="str">"cpu"</span>).textContent  = cpu + <span class="str">"%"</span>;
+  document.getElementById(<span class="str">"ram"</span>).textContent  = ram + <span class="str">"%"</span>;
+  document.getElementById(<span class="str">"net"</span>).textContent  = net + <span class="str">" Mbps"</span>;
+
+  <span class="cmt">// Simuler un changement aléatoire de statut</span>
+  <span class="kw">const</span> idx = Math.floor(Math.random() * services.length);
+  services[idx].status = Math.random() > <span class="num">0.12</span> ? <span class="str">"up"</span> : <span class="str">"down"</span>;
+
+  <span class="kw">const</span> list = document.getElementById(<span class="str">"services"</span>);
+  list.innerHTML = services.map(s =>
+    <span class="str">`&lt;li class="${s.status}"&gt;${s.name} — ${s.status.toUpperCase()}&lt;/li&gt;`</span>
+  ).join(<span class="str">""</span>);
+}
+
+setInterval(updateDashboard, <span class="num">2000</span>);
+updateDashboard();</code></pre></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__links">
+    <a href="https://github.com/Bearwholovebeer" target="_blank" class="footer__link">GitHub</a>
+    <a href="https://www.linkedin.com/in/titouan-lefebvre-le-brouster-031602282" target="_blank" class="footer__link">LinkedIn</a>
+    <a href="contact.html" class="footer__link">Email</a>
+  </div>
+  <p>&copy;Titouan Lefebvre</p>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
