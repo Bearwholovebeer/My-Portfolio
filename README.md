@@ -2,6 +2,10 @@
 
 Portfolio en HTML/CSS/JS vanilla avec shader WebGL.
 
+## Photo
+
+Place `Photo.jpg` a la racine du projet.
+
 ## Deploiement
 
 ```bash

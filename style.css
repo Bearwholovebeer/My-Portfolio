@@ -284,7 +284,7 @@ body::before {
   margin-bottom: 1.25rem;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
-.hero__name .accent { color: #1B3A6B; }
+.hero__name .accent { color: #FFFFFF; }
 .hero__tagline {
   font-size: clamp(1rem, 2.2vw, 1.3rem);
   color: var(--white-muted);
@@ -360,7 +360,7 @@ body::before {
   margin-bottom: .5rem;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
 }
-.section__title .accent { color: #1B3A6B; }
+.section__title .accent { color: #FFFFFF; }
 .section__subtitle {
   color: var(--white-muted);
   font-size: 1.05rem;
@@ -490,7 +490,7 @@ body::before {
 .timeline__date { font-size: .8rem; font-weight: 600; color: var(--cyan); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .25rem; }
 .timeline__title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: .3rem; }
 .timeline__desc { color: var(--white-muted); font-size: .9rem; line-height: 1.6; }
-.timeline__section-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 2rem; color: #1B3A6B; }
+.timeline__section-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 2rem; color: #FFFFFF; }
 
 /* contact */
 .contact-wrapper { max-width: 600px; position: relative; z-index: 2; }
